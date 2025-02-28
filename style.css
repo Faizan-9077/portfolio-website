@@ -53,6 +53,35 @@ img{
     color: rgb(255,77,0);
 }
 
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: black;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+}
+
+.cta:hover{
+    color: white;
+    background-color: black;
+}
+
+.brand h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.brand h1 span{
+    color: black;
+}
+
 #one {
     background-image: url(./img/flat-lay-desk-concept-with-copy-space.jpg);
     background-size: cover;
@@ -106,25 +135,6 @@ img{
 }
 #one h1:nth-child(3) span{
     animation-delay: 3s;
-}
-
-.cta{
-    display: inline-block;
-    padding: 10px 30px;
-    color: black;
-    background-color: transparent;
-    border: 2px solid black;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    margin-top: 30px;
-    transition: 0.3s ease;
-    transition-property: background-color, color;
-}
-
-.cta:hover{
-    color: white;
-    background-color: black;
 }
 
 #projects .projects{
@@ -248,15 +258,108 @@ img{
     border: 5px solid black;
 }
 
-/* #about .col-left .about-img::after{
-    content: '';
-    position: absolute;
-    left: -33px;
-    top: 19px;
-    height: 98%;
-    border: 7px solid red;
-    z-index: -1;
-} */
+#contact{
+    margin-top: 100px;
+}
+
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+#contact .contact-items{
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#contact .contact-item{
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 5px 0 #0000002c;
+    transition: 0.3s ease box-shadow;
+    
+}
+
+#contact .contact-item:hover{
+    box-shadow: 0 0 18px 0 #0000002c;
+}
+
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+
+#contact .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+#footer{
+    background-image: linear-gradient(60deg, #0077ff 0%, #485563 100%);
+    margin-top: 200px;
+}
+
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer h2{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: 0.3s ease filter;
+}
+
+#footer .social-item:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+#footer p{
+    color: white;
+}
+
 
 @keyframes text_animation{
     50%{
@@ -277,4 +380,109 @@ img{
         opacity: 1;
         color: black;
     }
+}
+
+@media only screen and (min-width: 768px) {
+    .cta{
+        font-size: 2.5rem;padding: 20px 60px;
+    }
+
+    h1.section-title{
+        font-size: 6rem;
+    }
+
+    #one h1{
+        font-size: 7rem;
+    }
+
+    #projects .project-item{
+        flex-direction: row;
+    }
+
+    #projects .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    #projects .project-item{
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0; 
+    }
+
+    #projects .all-projects .project-info{
+        height: 100%;
+    }
+
+    #projects .all-projects .project-img{
+        height: 100%;
+    }
+
+    #about .about{
+        flex-direction: row;
+    }
+
+    #about .col-left{
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+
+    #about .about .col-left .about-img::after{
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid red;
+    }
+
+    #about .col-right{
+        text-align: left;
+        padding: 30px;
+    }
+
+    #about .col-right h1{
+        text-align: left;
+    }
+
+    #contact .contact{
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+
+    #contact .contact-items{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #contact .contact-item{
+        width: 30%;
+        margin: 0;
+        flex-direction: row;
+    }
+
+    #contact .contact-item .icon{
+        height: 100px;
+        width: 100px;
+    }
+
+    #contact .contact-item .icon img{
+        object-fit: contain;
+    }
+
+    #contact .contact-item .contact-info{
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    @media only screen and(min-width: 1200px) {
+
+    }
+
 }
