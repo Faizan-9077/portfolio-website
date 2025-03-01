@@ -10,6 +10,7 @@
 html{
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 a{
@@ -35,7 +36,7 @@ p{
 
 img{
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
 }
 
@@ -89,14 +90,16 @@ img{
     top: 0;
     width: 100%;
     height: auto;
+    background-color: rgba(31, 30, 30, 0.24);
+    transition: background-color 0.3s ease;
 }
 
 #header .header{
     min-height: 8vh;
-    background-color: rgba(31, 30, 30, 0.24);
 }
 
 #header .nav-bar{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -230,7 +233,7 @@ img{
 #one .one{
     max-width: 1200px;
     margin: 0 auto;
-    padding : 0, 50px;
+    padding : 0 50px;
     justify-content: flex-start;
 }
 
@@ -263,7 +266,7 @@ img{
     width: 0;
     background-color: white;
     animation: text_animation 1s ease;
-    animation-delay: 0.5;
+    animation-delay: 0.5s;
 }
 
 #one h1:nth-child(1) span{
@@ -331,9 +334,6 @@ img{
     overflow: hidden;
     position: relative;
 }
-/* .project-items {
-    margin-bottom: 50px; 
-} */
 
 #projects .project-img::after{
    content: '';
@@ -373,7 +373,7 @@ img{
 }
 
 #about .col-right h2{
-    font-size: 1.8 rem;
+    font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: 1.2rem;
     margin-bottom: 10px;
@@ -640,6 +640,14 @@ img{
             height: auto;
             width: fit-content;
             background: transparent;
+        }
+
+        #header .nav-list ul li{
+            display: inline-block;
+        }
+
+        #header .nav-list ul li a{
+            font-size: 1.8rem;
         }
 
         #header .nav-list ul a:after{
