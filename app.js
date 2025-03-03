@@ -25,6 +25,6 @@ document.addEventListener('scroll', () => {
         header.style.backgroundColor = '#29323c';
     }
     else{
-        header.style.backgroundColor = 'transparent';
+        header.style.backgroundColor = '#b1aab3';
     }
 });

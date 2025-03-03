@@ -90,7 +90,7 @@ img{
     top: 0;
     width: 100%;
     height: auto;
-    background-color: rgba(31, 30, 30, 0.24);
+    background-color:#b1aab3;
     transition: background-color 0.3s ease;
 }
 
