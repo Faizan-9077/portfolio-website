@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website! 🎉  
 
 ## 🌐 Live Demo  
-🔗 [Check it out here](https://faizan-9077.github.io/Portfolio-Website/)  
+🔗 [Check it out here](https://faizan-9077.github.io/portfolio-website/)  
 
 ## 🛠️ Technologies Used  
 - HTML  
